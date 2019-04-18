@@ -1,18 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import IndexPage from "@/components/App";
+import CrimeMap from '@/components/CrimeMap'
+import Signup from '@/components/Signup'
+import Signin from '@/components/Signin'
 
 Vue.use(Router)
 
 export default new Router({
-  data: {
-    todos: []
-  },
   routes: [
     {
       path: '/',
-      name: 'App',
-      component: IndexPage
+      name: 'Crime Map',
+      component: CrimeMap
+    },
+    {
+      path: '/signup',
+      name: 'Signup',
+      component: Signup
+    },
+    {
+      path: '/signin',
+      name: 'Signin',
+      component: Signin
     }
   ]
 })
