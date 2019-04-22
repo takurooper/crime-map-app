@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    
+    <div class="map"></div>
     <b-button @click="signOut">Sign out</b-button>
   </div>
 </template>
@@ -14,7 +15,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Child Map',
-      name: firebase.auth().currentUser.email
+      name: firebase.auth().currentUser.displayName
     }
   },
   methods: {
@@ -29,6 +30,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.map{
+    background-color: bisque;
+    height: 500px;
+    margin: 50px 20px;
+}
 h1, h2 {
   font-weight: normal;
 }

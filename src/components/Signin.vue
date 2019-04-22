@@ -31,8 +31,7 @@ export default {
       firebase.auth().signInWithRedirect(provider)
         if (user) {
           console.log("Success");
-          path: '/';
-          query: { redirect: to.fullPath };
+          location.href = '/child';
         } else {
         
           console.log("Fail");

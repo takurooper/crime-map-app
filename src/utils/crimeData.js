@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyAiOIgnzJ1jGnHs9OoZpHxaae44XYlr_8w';
+const API_KEY = 'YOUR_API_KEY';
 
 const fs = require('fs');
 const csvSync = require('csv-parse/lib/sync');
