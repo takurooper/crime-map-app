@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>Hello, {{ name }}</h1>
     <b-button @click="signOut">Sign out</b-button>
   </div>
 </template>
@@ -14,9 +14,10 @@ export default {
   data () {
     return {
       msg: 'Welcome to Parent Map',
-      name: firebase.auth().currentUser.email
+      name: firebase.auth().currentUser.displayName
     }
   },
+
   methods: {
     signOut: function () {
       firebase.auth().signOut().then(() => {
