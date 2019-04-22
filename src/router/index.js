@@ -2,7 +2,8 @@
 
 import Vue from 'vue'
 import Router from 'vue-router'
-import CrimeMap from '@/components/CrimeMap'
+import ChildMap from '@/components/ChildMap'
+import ParentMap from '@/components/ParentMap'
 import Signup from '@/components/Signup'
 import Signin from '@/components/Signin'
 import firebase from 'firebase'
@@ -17,9 +18,15 @@ let router = new Router({
       redirect: 'signin'
     },
     {
-      path: '/',
-      name: 'Crime Map',
-      component: CrimeMap,
+      path: '/child',
+      name: 'Child Map',
+      component: ChildMap,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/parent',
+      name: 'Parent Map',
+      component: ParentMap,
       meta: { requiresAuth: true }
     },
     {

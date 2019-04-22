@@ -13,7 +13,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Crime Map',
+      msg: 'Welcome to Child Map',
       name: firebase.auth().currentUser.email
     }
   },
