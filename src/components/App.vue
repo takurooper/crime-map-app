@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <headerItem/>
     <router-view/>
   </div>
 </template>
@@ -7,8 +8,13 @@
 <script>
 /* eslint-disable */
 
+import headerItem from './HeaderItem'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components : {
+    headerItem
+  }
 }
 </script>
 

@@ -4,7 +4,7 @@
     <div class="links">
   <b-button
     @click="signUp"
-    class="button--green">signUp</b-button>
+    class="btn-warning">signUp</b-button>
 </div>
     <p>Do you have an account?<router-link to="/signin">sign in now!!</router-link>
     </p>
@@ -48,7 +48,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #17a2b8;
 }
 .signup {
   margin-top: 20px;
