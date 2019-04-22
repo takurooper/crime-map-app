@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    
     <div class="map"></div>
     <b-button @click="signOut">Sign out</b-button>
   </div>
