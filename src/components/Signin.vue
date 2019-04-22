@@ -1,5 +1,6 @@
 <template>
   <div class="signin">
+    <img src="@/assets/logo.png">
     <div class="links">
   <b-button
     @click="signIn"

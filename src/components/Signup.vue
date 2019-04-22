@@ -1,5 +1,6 @@
 <template>
   <div class="signup">
+    <img src="@/assets/logo.png">
     <div class="links">
   <b-button
     @click="signUp"
