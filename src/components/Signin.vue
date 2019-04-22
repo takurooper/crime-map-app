@@ -6,13 +6,14 @@
     @click="signIn"
     class="button--green">Sign in</b-button>
 </div>
-    <p>You don't have an account? 
-      <router-link to="/signup">create account now!!</router-link>
+    <p>You don't have an account?<router-link to="/signup">create account now!!</router-link>
     </p>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
+
 import firebase from 'firebase'
 import "firebase/auth"
 
