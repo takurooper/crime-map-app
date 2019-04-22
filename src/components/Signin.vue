@@ -1,9 +1,10 @@
 <template>
   <div class="signin">
-    <h2>Sign in</h2>
-    <input type="text" placeholder="Username" v-model="username">
-    <input type="password" placeholder="Password" v-model="password">
-    <button>Signin</button>
+    <div class="links">
+  <b-button
+    @click="signIn"
+    class="button--green">Sign in</b-button>
+</div>
     <p>You don't have an account? 
       <router-link to="/signup">create account now!!</router-link>
     </p>
@@ -11,15 +12,31 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+import "firebase/auth"
+
 export default {
   name: 'Signin',
-  data () {
+  data: function () {
     return {
       username: '',
       password: ''
     }
   },
-  methods: {}
+  methods: {
+    signIn: function () {
+      const provider = new firebase.auth.GoogleAuthProvider()
+      firebase.auth().signInWithRedirect(provider).then(
+        user => {
+          alert('Success!')
+          this.$router.push('/')
+        },
+        err => {
+          alert(err.message)
+        }
+      )
+    }
+  }
 }
 </script>
 
