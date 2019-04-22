@@ -1,0 +1,25 @@
+[debug] [2019-04-22T06:17:57.813Z] ----------------------------------------------------------------------
+[debug] [2019-04-22T06:17:57.815Z] Command:       /usr/local/Cellar/node/11.9.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-04-22T06:17:57.815Z] CLI Version:   6.7.0
+[debug] [2019-04-22T06:17:57.815Z] Platform:      darwin
+[debug] [2019-04-22T06:17:57.815Z] Node Version:  v11.9.0
+[debug] [2019-04-22T06:17:57.817Z] Time:          Mon Apr 22 2019 15:17:57 GMT+0900 (日本標準時)
+[debug] [2019-04-22T06:17:57.817Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-22T06:17:57.830Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-22T06:17:57.830Z] > authorizing via signed-in user
+[debug] [2019-04-22T06:17:57.830Z] [iam] checking project crime-map-app for permissions ["firebase.projects.get"]
+[debug] [2019-04-22T06:17:57.833Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/crime-map-app:testIamPermissions  
+
+[debug] [2019-04-22T06:17:58.669Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-22T06:17:58.671Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/crime-map-app  
+ 
+[debug] [2019-04-22T06:17:59.501Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/takukuro/develop/crime-map-app'...
+[info] 
+[debug] [2019-04-22T06:17:59.503Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1067626853215/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-22T06:18:00.013Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
