@@ -28,15 +28,16 @@ export default {
   methods: {
     signIn: function () {
       const provider = new firebase.auth.GoogleAuthProvider()
-      firebase.auth().signInWithRedirect(provider).then(
-        user => {
-          alert('Success!')
-          this.$router.push('/')
-        },
-        err => {
-          alert(err.message)
+      firebase.auth().signInWithRedirect(provider)
+        if (user) {
+          console.log("Success");
+          path: '/';
+          query: { redirect: to.fullPath };
+        } else {
+        
+          console.log("Fail");
+          alert: 'login error'
         }
-      )
     }
   }
 }
