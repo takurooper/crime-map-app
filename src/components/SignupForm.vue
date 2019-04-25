@@ -1,10 +1,14 @@
 <template>
   <div class="signup_form">
-    <div class="links">
-</div>
+      <h2 class="header-padding">Hello {{name}} !    You are {{statusType}}</h2>
+      <input type="text" v-model="name" placeholder="お名前">
+      <div style="status_field">
+        <button class="status_select parent_color" type="submit"  v-on:click="status_parent">Parent</button>
+        <button class="status_select child_color" type="submit"  v-on:click="status_child">Child</button>
+      </div>
+      <b-button href="/parent">Start</b-button>
   </div>
 </template>
-
 <script>
 /* eslint-disable */
 
@@ -15,8 +19,25 @@ export default {
   name: 'SignupForm',
   data () {
     return {
-      username: '',
+      name: firebase.auth().currentUser.displayName,
       password: ''
+    }
+  },
+  props: ['database','usersRef','statusType'],
+  methods: {
+    status_parent: function () {
+      this.usersRef.push({
+          statusType: "parent",
+          name: this.name
+      });
+      statusType: "parent"
+    },
+    status_child: function () {
+        console.log();
+      firebase.auth().currentUser.updateProfile({
+          statusType: "child"
+      });
+      statusType: "parent"
     }
   }
 }
@@ -24,6 +45,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.status_field{
+    display:flex;
+    margin: 0 auto;
+}
+.status_select{
+    width: 300px;
+    height:300px;
+    margin: 30px;
+}
+.parent_color{
+  background-color: aqua;
+}
+.child_color{
+  background-color: bisque;
+}
+.header-padding{
+    margin: 100px 0 200px 0;
+}
 h1, h2 {
   font-weight: normal;
 }
