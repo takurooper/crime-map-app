@@ -22,13 +22,15 @@ export default {
   data () {
     return {
       username: '',
-      password: ''
+      password: '',
+      usersRef: null
     }
   },
   methods: {
     signUp: function () {
       const provider = new firebase.auth.GoogleAuthProvider()
       firebase.auth().signInWithRedirect(provider)
+      this.$router.push('/signup_form')
     }
   }
 }
