@@ -6,6 +6,7 @@ import ChildMap from '@/components/ChildMap'
 import ParentMap from '@/components/ParentMap'
 import Signup from '@/components/Signup'
 import Signin from '@/components/Signin'
+import SignupForm from '@/components/SignupForm'
 import firebase from 'firebase'
 
 
@@ -16,6 +17,12 @@ let router = new Router({
     {
       path: '*',
       redirect: 'signin'
+    },
+    {
+      path: '/signup_form',
+      name: 'signup_form',
+      component: SignupForm,
+      meta: { requiresAuth: true }
     },
     {
       path: '/child',
