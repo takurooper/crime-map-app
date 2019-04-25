@@ -5,12 +5,16 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 import router from './router'
+
 import firebase from 'firebase'
 
 //bootstrap 4.0
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import * as VueGoogleMaps from 'vue2-google-maps'
+
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false
@@ -36,6 +40,14 @@ var config = {
   messagingSenderId: "1067626853215"
 };
 firebase.initializeApp(config);
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    // 開発段階では授業で用意されたAPIkeyを利用
+    key: 'AIzaSyAiOIgnzJ1jGnHs9OoZpHxaae44XYlr_8w',
+    libraries: 'places'
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

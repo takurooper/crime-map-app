@@ -8,7 +8,6 @@ import Signup from '@/components/Signup'
 import Signin from '@/components/Signin'
 import firebase from 'firebase'
 
-
 Vue.use(Router)
 
 let router = new Router({
